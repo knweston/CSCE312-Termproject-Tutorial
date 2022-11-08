@@ -147,7 +147,7 @@ In our term project, we are stick to use ``v3.0 hex words addressed``.
 
 
 
-This pythone script take two command line arguments as follows:
+This python script take two command line arguments as follows:
 
 .. code-block:: bash
 
