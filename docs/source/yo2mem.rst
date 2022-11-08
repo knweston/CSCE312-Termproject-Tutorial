@@ -25,7 +25,7 @@ Since we focus on the processor design so we simplify the above processes.
 
 Specifically, we rely on ``yas`` - the Y86-64 assembler. ``yas`` takes assembly code (.ys) as an input and outputs a memory file ``.yo`` that contains both machine code and data.
 However, Y86-64 SEQ implemented with logisim cannot directly understand ``yo`` file.
-Therefore, we need to make a converter to convert content of the .yo file to something that logisim can understand.
+Therefore, we need to make a converter to convert content of the ``.yo`` file to something that logisim can understand.
 
 2. .yo file format
 **********************
