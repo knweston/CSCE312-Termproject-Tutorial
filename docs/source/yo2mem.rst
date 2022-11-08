@@ -24,8 +24,8 @@ Since we focus on the processor design so we simplify the above processes.
     .ys --yas--> .yo --yo2mem--> .mem
 
 Specifically, we rely on ``yas`` which is Y86-64 assembler. ``yas`` takes assembly code (.ys) as an input and outputs a memory file ``.yo`` that contains both machine code and data.
-However, Y86-64 SEQ implemented with logisim tool cannot directly understand ``yo`` file.
-Therefore, we are supposed to make a convertor from .yo to something that logisim can understand.
+However, Y86-64 SEQ implemented with logisim cannot directly understand ``yo`` file.
+Therefore, we are supposed to make a converter from .yo to something that logisim can understand.
 
 2. .yo file format
 **********************
@@ -78,7 +78,7 @@ If you are interested in logisim's memory file format in detail, please refer to
 In our term project, we are stick to use ``v3.0 hex words addressed``.
 
 
-4. YO2MEM pytyon script
+4. YO2MEM python script
 ************************
 
 .. code-block:: python
