@@ -23,20 +23,20 @@ Figure 4.2 and 4.3 list the instructions of Y86-64-SEQ with its format, size, op
 
 Variable length instruction
 --------------------------------------
-Y86-64-SEQ has instructions with variable size ranging from 1 byte to 10 bytes. For simple implementation, we fix the number of cycles to fetch the instruction with 10 cycles.
+Y86-64-SEQ has instructions with variable size ranging from 1 byte to 10 bytes. For simple implementation, we fix the number of cycles to fetch the instruction to 10 cycles.
 
 Opcode and Function code in the first byte
 --------------------------------------------
-In first byte of the insturction, it stores opcoe that is an instruction speicifier and function code that indicates specific integer operation (OPq), data movement condition (cmovXX),
+In first byte of the instruction, it stores the opcode that is an instruction specifier and the function code that indicates specific integer operation (OPq), data movement condition (cmovXX),
 or branch condition (jXX).
 ``OPq RA, RB`` for an example, two arithmetic (addq and subq) and two logical (andq and xorq) instructions share the same opcode 6 but they have different function code from 0 to 3 (See Figure 4.3).
 
 
 Register ID in the second byte
 --------------------------------------
-If instructions include source and destation registers, they are stored in the second byte of the instruction.
+If instructions include source and destination registers, they are stored in the second byte of the instruction.
 First half byte stores the first source operand, and second half byte stores the second source (or destination) operand.
-If an insturction have a single operand (pushq, popq), then the second half byte store 0xF indicating no register (Figure 4.4).
+If an instruction has a single operand (pushq, popq), then the second half byte stores 0xF indicating no register (Figure 4.4).
 
 Immediate Value from the second or third byte to tenth byte.
 -------------------------------------------------------------
