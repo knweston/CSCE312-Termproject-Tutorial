@@ -23,9 +23,9 @@ Since we focus on the processor design so we simplify the above processes.
 
     .ys --yas--> .yo --yo2mem--> .mem
 
-Specifically, we rely on ``yas`` which is Y86-64 assembler. ``yas`` takes assembly code (.ys) as an input and outputs a memory file ``.yo`` that contains both machine code and data.
+Specifically, we rely on ``yas`` - the Y86-64 assembler. ``yas`` takes assembly code (.ys) as an input and outputs a memory file ``.yo`` that contains both machine code and data.
 However, Y86-64 SEQ implemented with logisim cannot directly understand ``yo`` file.
-Therefore, we are supposed to make a converter from .yo to something that logisim can understand.
+Therefore, we need to make a converter to convert content of the .yo file to something that logisim can understand.
 
 2. .yo file format
 **********************
@@ -68,14 +68,14 @@ Therefore, we are supposed to make a converter from .yo to something that logisi
     0x200:                      | 	.pos 0x200
     0x200:                      | stack:
 
-```.yo`` file includes memmory contents followed by its corresponding assembly code in the input ``.ys`` file.
+```.yo`` file includes memory contents followed by its corresponding assembly code in the input ``.ys`` file.
 In memory contents, it starts with start memory address followed by machine code or data. We just need memory contents for the logisim memory file.
 
 3. Logisim Memory File
 ************************
-Logisim has its own file format that represents the content of memory. There are some versions of the memory file.
+Logisim has its own file format that represents the content of the memory. There are some versions of the memory file.
 If you are interested in logisim's memory file format in detail, please refer to the logisim reference.
-In our term project, we are stick to use ``v3.0 hex words addressed``.
+In our term project, we are stick to ``v3.0 hex words addressed``.
 
 
 4. YO2MEM python script
@@ -147,7 +147,7 @@ In our term project, we are stick to use ``v3.0 hex words addressed``.
 
 
 
-This python script take two command line arguments as follows:
+This python script takes two command line arguments as follows:
 
 .. code-block:: bash
 
