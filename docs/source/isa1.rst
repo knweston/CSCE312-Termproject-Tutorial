@@ -43,11 +43,11 @@ In the textbook, a specification of memory such as address and data bit width is
    * - Property
      - Value
    * - Address Bit Width
-     - 24-bit
+     - 12-bit
    * - Data Bit Width
      - 8-bit
 
-We use the same specifications for both instruction and data memory. We use 24 bits for memory addressing and this is because the logisim supports 24 bit in maximum. Data bit width is 8-bit and it means that the memory module can read/write 1 bytes per cycles.
+We use the same specifications for both instruction and data memory. We use 12 bits for memory addressing (Logisim supports up to 24 bits). Data bit width is 8-bit, meaning the memory module can read/write 1 bytes per cycle. 
 For example, it takes 8 cycles to load a data with type ``.quad`` (quadrant word). Again, you can design with different properties as you wish.
 
 Condition codes
