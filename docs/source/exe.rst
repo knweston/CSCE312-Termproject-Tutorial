@@ -71,7 +71,7 @@ Outputs
 
 .. figure:: ./images/overflow2.png
 
-
+.. figure:: ./images/overflow-detector.png
  
 Condition Code (CC) module
 ***************************
